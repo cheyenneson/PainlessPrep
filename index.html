@@ -8,6 +8,10 @@
 </head>
 
 <body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
     <img src="./img/bootie.jpg" width="30" height="30" alt="">
@@ -120,18 +124,19 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">White Addidas</h5>
+            <h5 class="modal-title" id="exampleModalLabel">White Adidas</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <img class="img-center" src="img/addidas.jpg" style="width: 300px;"/>
-            <div>White Addidas with red stripes. Wear them casually or for sports!</div>
+            <div>White Adidas with red stripes. Wear them casually or for sports!</div>
             <div>Price: $49.99</div>
             <div>Available sizes: 7, 9, 10, 10.5, 12</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="White Adidas" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -155,6 +160,7 @@
             <div>Available sizes: 7, 7.5, 8, 9, 9.5</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="Leopard Print Booties" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -178,6 +184,7 @@
             <div>Available sizes: 7, 7.5, 8, 8.5, 9.5</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="Men's Dress Shoes" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -201,6 +208,7 @@
             <div>Available sizes: 7.5, 9, 9.5, 10</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="Gray Sneakers" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -224,6 +232,7 @@
             <div>Available sizes: 7.5, 9, 9.5, 10</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="Women's Red Heels" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -247,6 +256,7 @@
             <div>Available sizes: 7, 7.5, 9.5, 10, 10.5</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="Orange and Gray Nikes" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -270,6 +280,7 @@
             <div>Available sizes: 6, 7, 7.5, 8, 9</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="Women's Pink Sneakers" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -293,6 +304,7 @@
             <div>Available sizes: 4, 4.5, 6, 6.5, 7</div>
           </div>
           <div class="modal-footer">
+            <button type="button" data-id="Children's Rainbow High-Tops" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -314,6 +326,31 @@
             <div>Whether for comfort or style, these go with any outfit or occasion.</div>
             <div>Price: $39.98</div>
             <div>Available sizes: 7, 7.5, 8, 9.5, 10, 10.5</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-id="Black Toms" class="btn btn-primary shoeclick" data-dismiss="modal">Order</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- order form -->
+    <div style="display: none;">
+      <a class="modal-link order-link" data-toggle="modal" data-target="#orderForm">order form</a>
+    </div>
+
+    <div class="modal fade" id="orderForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Order Confirmation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 class="order-details"></h1>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -338,11 +375,6 @@
             <a id="mail" href="https://www.gmail.com/"><img id="icon" src="img/mail.png" style="width: 50px;"/></a>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
 </body>
 
 </html>
