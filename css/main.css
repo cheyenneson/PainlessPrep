@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Avenir', Helvetica, sans-serif;
+}
 /*footer styling*/
 .footer .social #icon {
     width: 50px;
@@ -31,4 +33,8 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.title {
+  text-align: center;
 }
