@@ -1,0 +1,25 @@
+* {
+  font-family: 'Avenir', Helvetica, sans-serif;
+  /*background-image: url("img/food.png");*/
+}
+
+.intro {
+  width: 400px;
+  float: right;
+  text-align: center;
+  margin-right: 500px;
+  margin-top: 200px;
+}
+
+.intro button {
+  background-color: #ff0000;
+  border: none;
+  border-radius: 20px;
+  color: #f8f9fa;
+  width: 200px;
+  height: 50px;
+}
+
+.btn {
+  align-items: center;
+}
