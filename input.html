@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="input.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
@@ -33,10 +33,27 @@
     </div>
   </nav>
 
-  <div>
-    <h1>Enter Ingredients</h1>
-    <button>import recipe</button>
+  <div id="horizontal">
+    <h1 id="title">Enter Ingredients</h1>
+    <button id="btn">import recipe</button>
   </div>
+
+  <!-- we'd wanna turn this into a vue component so we can reuse it -->
+  <div id="input_box">
+    <div id="horizontal">
+      <div id="input_item">
+        item
+      </div>
+      <div id="input_item">
+        quantity
+      </div>
+      <div id="input_item">
+        preferred brand
+      </div>
+    </div>
+  </div>
+
+  <img id="straw" src="/img/strawberry.jpg" />
 
 </body>
 
