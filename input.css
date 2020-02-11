@@ -20,6 +20,20 @@ button {
 #input_item {
   width: 33%;
   color: #6c6d70;
+  padding-top: 32px;
+  padding-left: 24px;
+}
+
+#add_button {
+  background-color: #f2f2f2;
+  color: #6c6d70;
+  height: 48px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+  text-align: center;
 }
 
 #title {
