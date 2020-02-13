@@ -37,46 +37,37 @@
     <button id="btn">import recipe</button>
   </div>
 
-  <!-- we'd wanna turn this into a vue component so we can reuse it -->
-  <div id="input_box">
-    <div id="horizontal">
-      <div id="input_item">
-	      <input />
-	      <p>item</p>
-      </div>
-      <div id="input_item">
-	      <input />
-	      <p>quantity</p>
-      </div>
-      <div id="input_item">
-	      <input />
-	      <p>preferred brand</p>
+  <form v-on:submit.prevent="addItem">
+
+    <div id="input_box">
+      <div id="horizontal">
+        <div id="input_item">
+          <input v-model="addedItem" placeholder="item"></p>
+        </div>
+        <div id="input_item">
+          <input v-model="addedQuantity" placeholder="quantity"></p>
+        </div>
+        <div id="input_item">
+          <input v-model="addedBrand" placeholder="preferred brand"></p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="input_box">
-    <div id="horizontal">
-      <div id="input_item">
-              <input />
-              <p>item</p>
-      </div>
-      <div id="input_item">
-              <input />
-              <p>quantity</p>
-      </div>
-      <div id="input_item">
-              <input />
-              <p>preferred brand</p>
-      </div>
-    </div>
-  </div>
+    <button type="submit">submit</button>
 
-  <div id="add_button">
-	  add item +
+  </form>
+
+  <h1>Entered Ingredients</h1>
+  <div v-for="ingredient in ingredients">
+    <hr>
+    <p>{{ingredient.item}}</p>
+    <p>{{ingredient.quantity}}</p>
+    <p>{{ingredient.preferred_band}}</p>
+    <br>
   </div>
 
   <img id="straw" src="img/strawberry.jpg" />
+  <script src="script.js"></script>
 
 </body>
 
