@@ -6,7 +6,7 @@ let app = new Vue({
             quantity: '',
             preferred_brand: ''
         },
-        ingredients: {},
+        ingredients: [],
         addedItem: '',
         addedQuantity: '',
         addedBrand: ''
