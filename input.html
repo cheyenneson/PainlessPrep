@@ -37,37 +37,40 @@
     <button id="btn">import recipe</button>
   </div>
 
-  <form v-on:submit.prevent="addItem">
+  <div id="app">
 
-    <div id="input_box">
-      <div id="horizontal">
-        <div id="input_item">
-          <input v-model="addedItem" placeholder="item"></p>
-        </div>
-        <div id="input_item">
-          <input v-model="addedQuantity" placeholder="quantity"></p>
-        </div>
-        <div id="input_item">
-          <input v-model="addedBrand" placeholder="preferred brand"></p>
+    <form v-on:submit.prevent="addItem">
+      <div id="input_box">
+        <div id="horizontal">
+          <div id="input_item">
+            <input v-model="addedItem" placeholder="item"></p>
+          </div>
+          <div id="input_item">
+            <input v-model="addedQuantity" placeholder="quantity"></p>
+          </div>
+          <div id="input_item">
+            <input v-model="addedBrand" placeholder="preferred brand"></p>
+          </div>
         </div>
       </div>
+
+      <button type="submit">submit</button>
+
+    </form>
+
+    <h1>Entered Ingredients</h1>
+    <div v-for="ingredient in ingredients">
+      <hr>
+      <p>{{ingredient.item}}</p>
+      <p>{{ingredient.quantity}}</p>
+      <p>{{ingredient.preferred_band}}</p>
+      <br>
     </div>
 
-    <button type="submit">submit</button>
-
-  </form>
-
-  <h1>Entered Ingredients</h1>
-  <div v-for="ingredient in ingredients">
-    <hr>
-    <p>{{ingredient.item}}</p>
-    <p>{{ingredient.quantity}}</p>
-    <p>{{ingredient.preferred_band}}</p>
-    <br>
   </div>
 
   <img id="straw" src="img/strawberry.jpg" />
-  
+
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
