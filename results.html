@@ -46,35 +46,62 @@
     </div>
   </div>
 
-  <!-- bootstrap grid structure -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        One of three columns
-      </div>
-      <div class="col-sm">
-        One of three columns
-      </div>
-      <div class="col-sm">
-        One of three columns
+  <div id="app">
+
+
+    <!-- bootstrap grid structure -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div v-for="ingredient in ingredients">
+            <p>{{ingredient.item}} : $3.07</p>
+          </div>
+          Total: ${{ingredients.length * 3.07}}
+        </div>
+        <div class="col-sm">
+          <div v-for="ingredient in ingredients">
+            <p>{{ingredient.item}} : $2.45</p>
+          </div>
+          Total: ${{ingredients.length * 2.45}}
+        </div>
+        <div class="col-sm">
+          <div v-for="ingredient in ingredients">
+            <p>{{ingredient.item}} : $5.10</p>
+          </div>
+          Total: ${{ingredients.length * 5.10}}
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        One of three columns
-      </div>
-      <div class="col-sm">
-        One of three columns
-      </div>
-      <div class="col-sm">
-        One of three columns
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div v-for="ingredient in ingredients">
+            <p>{{ingredient.item}} : $2.40</p>
+          </div>
+          Total: ${{ingredients.length * 2.40}}
+        </div>
+        <div class="col-sm">
+          <div v-for="ingredient in ingredients">
+            <p>{{ingredient.item}} : $4.97</p>
+          </div>
+          Total: ${{ingredients.length * 4.97}}
+        </div>
+        <div class="col-sm">
+          <div v-for="ingredient in ingredients">
+            <p>{{ingredient.item}} : $5.01</p>
+          </div>
+          Total: ${{ingredients.length * 5.01}}
+        </div>
       </div>
     </div>
+
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 
 </body>
 
