@@ -26,6 +26,9 @@ let app = new Vue({
         },
         switchToResults() {
             this.loading = false;
+        },
+        switchToInput() {
+            this.loading = true;
         }
     },
     computed: {},

@@ -38,7 +38,7 @@
       <div id="horizontal">
         <h1 id="title">Enter Ingredients</h1>
         <button id="btn">import recipe</button>
-        <button id="btn" onclick="switchToResults()" type="button">
+        <button id="btn" v-on:click="switchToResults()" type="button">
          see results</button>
       </div>
 
@@ -86,64 +86,61 @@
         </div>
       </div>
 
-      <div id="app">
+      <button id="btn" v-on:click="switchToInput()" type="button">
+         return to input</button>
 
-
-        <!-- bootstrap grid structure -->
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <img style="height: 20px;" class="brand" src="./img/walmart.png" />
-              <div v-for="ingredient in ingredients">
-                <p>{{ingredient.item}} : $3.07</p>
-              </div>
-              Total: ${{ingredients.length * 3.07}}
+      <!-- bootstrap grid structure -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img style="height: 20px;" class="brand" src="./img/walmart.png" />
+            <div v-for="ingredient in ingredients">
+              <p>{{ingredient.item}} : $3.07</p>
             </div>
-            <div class="col-sm">
-              <img style="height: 20px;" class="brand" src="./img/tj.png" />
-              <div v-for="ingredient in ingredients">
-                <p>{{ingredient.item}} : $2.45</p>
-              </div>
-              Total: ${{ingredients.length * 2.45}}
+            Total: ${{ingredients.length * 3.07}}
+          </div>
+          <div class="col-sm">
+            <img style="height: 20px;" class="brand" src="./img/tj.png" />
+            <div v-for="ingredient in ingredients">
+              <p>{{ingredient.item}} : $2.45</p>
             </div>
-            <div class="col-sm">
-              <img style="height: 40px;" class="brand" src="./img/target.png" />
-              <div v-for="ingredient in ingredients">
-                <p>{{ingredient.item}} : $5.10</p>
-              </div>
-              Total: ${{ingredients.length * 5.10}}
+            Total: ${{ingredients.length * 2.45}}
+          </div>
+          <div class="col-sm">
+            <img style="height: 40px;" class="brand" src="./img/target.png" />
+            <div v-for="ingredient in ingredients">
+              <p>{{ingredient.item}} : $5.10</p>
             </div>
+            Total: ${{ingredients.length * 5.10}}
           </div>
         </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <img style="height: 20px;" class="brand" src="./img/smiths.svg" />
-              <div v-for="ingredient in ingredients">
-                <p>{{ingredient.item}} : $2.40</p>
-              </div>
-              Total: ${{ingredients.length * 2.40}}
-            </div>
-            <div class="col-sm">
-              <img style="height: 20px;" class="brand" src="./img/aldi.png" />
-              <div v-for="ingredient in ingredients">
-                <p>{{ingredient.item}} : $4.97</p>
-              </div>
-              Total: ${{ingredients.length * 4.97}}
-            </div>
-            <div class="col-sm">
-              <img style="height: 20px;" class="brand" src="./img/walmart.png" />
-              <div v-for="ingredient in ingredients">
-                <p>{{ingredient.item}} : $5.01</p>
-              </div>
-              Total: ${{ingredients.length * 5.01}}
-            </div>
-          </div>
-        </div>
-
       </div>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img style="height: 20px;" class="brand" src="./img/smiths.svg" />
+            <div v-for="ingredient in ingredients">
+              <p>{{ingredient.item}} : $2.40</p>
+            </div>
+            Total: ${{ingredients.length * 2.40}}
+          </div>
+          <div class="col-sm">
+            <img style="height: 20px;" class="brand" src="./img/aldi.png" />
+            <div v-for="ingredient in ingredients">
+              <p>{{ingredient.item}} : $4.97</p>
+            </div>
+            Total: ${{ingredients.length * 4.97}}
+          </div>
+          <div class="col-sm">
+            <img style="height: 20px;" class="brand" src="./img/walmart.png" />
+            <div v-for="ingredient in ingredients">
+              <p>{{ingredient.item}} : $5.01</p>
+            </div>
+            Total: ${{ingredients.length * 5.01}}
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
