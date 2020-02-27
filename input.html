@@ -31,46 +31,122 @@
       </ul>
     </div>
   </nav>
-  <div id="horizontal">
-    <h1 id="title">Enter Ingredients</h1>
-    <button id="btn">import recipe</button>
-    <button id="btn" onclick="location.href='results.html'" type="button">
-         see results</button>
-  </div>
+
 
   <div id="app">
+    <div v-if="loading">
+      <div id="horizontal">
+        <h1 id="title">Enter Ingredients</h1>
+        <button id="btn">import recipe</button>
+        <button id="btn" onclick="switchToResults()" type="button">
+         see results</button>
+      </div>
 
-    <form v-on:submit.prevent="addItem">
-      <div id="input_box">
-        <div id="horizontal">
-          <div id="input_item">
-            <input v-model="addedItem" placeholder="item"></p>
+      <form v-on:submit.prevent="addItem">
+        <div id="input_box">
+          <div id="horizontal">
+            <div id="input_item">
+              <input v-model="addedItem" placeholder="item"></p>
+            </div>
+            <div id="input_item">
+              <input v-model="addedQuantity" placeholder="quantity"></p>
+            </div>
+            <div id="input_item">
+              <input v-model="addedBrand" placeholder="preferred brand"></p>
+            </div>
           </div>
-          <div id="input_item">
-            <input v-model="addedQuantity" placeholder="quantity"></p>
-          </div>
-          <div id="input_item">
-            <input v-model="addedBrand" placeholder="preferred brand"></p>
+        </div>
+
+        <button type="submit" id="submit">submit</button>
+
+      </form>
+
+      <h1 id="title">Entered Ingredients</h1>
+      <div v-for="ingredient in ingredients">
+        <hr>
+        <p>{{ingredient.item}}</p>
+        <p>{{ingredient.quantity}}</p>
+        <p>{{ingredient.preferred_band}}</p>
+        <br>
+      </div>
+      <img id="straw" src="img/strawberry.jpg" />
+
+    </div>
+    <div v-else>
+      <div id="horizontal">
+        <h1 id="title">Results</h1>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort By
+      </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Price</a>
+            <a class="dropdown-item" href="#">Popularity</a>
           </div>
         </div>
       </div>
 
-      <button type="submit" id="submit">submit</button>
+      <div id="app">
 
-    </form>
 
-    <h1 id="title">Entered Ingredients</h1>
-    <div v-for="ingredient in ingredients">
-      <hr>
-      <p>{{ingredient.item}}</p>
-      <p>{{ingredient.quantity}}</p>
-      <p>{{ingredient.preferred_band}}</p>
-      <br>
+        <!-- bootstrap grid structure -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img style="height: 20px;" class="brand" src="./img/walmart.png" />
+              <div v-for="ingredient in ingredients">
+                <p>{{ingredient.item}} : $3.07</p>
+              </div>
+              Total: ${{ingredients.length * 3.07}}
+            </div>
+            <div class="col-sm">
+              <img style="height: 20px;" class="brand" src="./img/tj.png" />
+              <div v-for="ingredient in ingredients">
+                <p>{{ingredient.item}} : $2.45</p>
+              </div>
+              Total: ${{ingredients.length * 2.45}}
+            </div>
+            <div class="col-sm">
+              <img style="height: 40px;" class="brand" src="./img/target.png" />
+              <div v-for="ingredient in ingredients">
+                <p>{{ingredient.item}} : $5.10</p>
+              </div>
+              Total: ${{ingredients.length * 5.10}}
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img style="height: 20px;" class="brand" src="./img/smiths.svg" />
+              <div v-for="ingredient in ingredients">
+                <p>{{ingredient.item}} : $2.40</p>
+              </div>
+              Total: ${{ingredients.length * 2.40}}
+            </div>
+            <div class="col-sm">
+              <img style="height: 20px;" class="brand" src="./img/aldi.png" />
+              <div v-for="ingredient in ingredients">
+                <p>{{ingredient.item}} : $4.97</p>
+              </div>
+              Total: ${{ingredients.length * 4.97}}
+            </div>
+            <div class="col-sm">
+              <img style="height: 20px;" class="brand" src="./img/walmart.png" />
+              <div v-for="ingredient in ingredients">
+                <p>{{ingredient.item}} : $5.01</p>
+              </div>
+              Total: ${{ingredients.length * 5.01}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
-
-  <img id="straw" src="img/strawberry.jpg" />
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

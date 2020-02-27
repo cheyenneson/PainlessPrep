@@ -9,7 +9,9 @@ let app = new Vue({
         ingredients: [],
         addedItem: '',
         addedQuantity: '',
-        addedBrand: ''
+        addedBrand: '',
+        loading: true,
+
     },
     methods: {
         addItem() {
@@ -22,7 +24,9 @@ let app = new Vue({
             this.addedQuantity = '';
             this.addedBrand = '';
         },
+        switchToResults() {
+            this.loading = false;
+        }
     },
-    computed: {
-    },
+    computed: {},
 });
