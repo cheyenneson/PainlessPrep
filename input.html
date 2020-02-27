@@ -55,16 +55,16 @@
         </div>
       </div>
 
-      <button type="submit">submit</button>
+      <button type="submit" id="submit">submit</button>
 
     </form>
 
-    <h1>Entered Ingredients</h1>
+    <h1 id="title">Entered Ingredients</h1>
     <div v-for="ingredient in ingredients">
       <hr>
       <p>{{ingredient.item}}</p>
       <p>{{ingredient.quantity}}</p>
-      <p>{{ingredient.pref_brand}}</p>
+      <p>{{ingredient.preferred_band}}</p>
       <br>
     </div>
 

@@ -1,5 +1,6 @@
 * {
   font-family: 'Avenir', Helvetica, sans-serif;
+  f
   /*background-image: url("img/food.png");*/
 }
 
@@ -43,4 +44,14 @@ button {
 
 #logo {
   height: 50px;
+}
+
+/*steps*/
+
+#step-1 {
+  background-color: #ffda01;
+}
+
+.step-title {
+  color: #6c6d70;
 }

@@ -6,6 +6,7 @@ button {
   background-color: #ff0000;
   border: none;
   color: #f8f9fa;
+  border-radius: 8px;
 }
 
 #horizontal {
@@ -43,7 +44,8 @@ button {
 
 #btn {
   width: 25%;
-  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #straw {
@@ -61,4 +63,9 @@ button {
   margin-right: auto;
   margin-top: 32px; 
   height: 96px;
+}
+
+#submit {
+  margin-left: auto;
+  margin-right: auto;
 }

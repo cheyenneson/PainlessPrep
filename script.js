@@ -4,7 +4,7 @@ let app = new Vue({
         ingredient: {
             item: '',
             quantity: '',
-            pref_brand: ''
+            preferred_brand: ''
         },
         ingredients: [],
         addedItem: '',
@@ -16,7 +16,7 @@ let app = new Vue({
             this.ingredients.push({
                 item: this.addedItem,
                 quantity: this.addedQuantity,
-                pref_brand: this.addedBrand
+                preferred_brand: this.addedBrand
             });
             this.addedItem = '';
             this.addedQuantity = '';
