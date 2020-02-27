@@ -55,3 +55,8 @@ button {
 .step-title {
   color: #6c6d70;
 }
+
+#steps-container {
+  display: flex;
+  justify-content: space-evenly;
+}
