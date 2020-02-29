@@ -32,14 +32,14 @@
     </div>
   </nav>
 
-
   <div id="app">
     <div v-if="loading">
       <div id="horizontal">
-        <h1 id="title">Enter Ingredients</h1>
-        <button id="btn">import recipe</button>
-        <button id="btn" v-on:click="switchToResults()" type="button">
-         see results</button>
+        <h1 class="title">Enter Ingredients</h1>
+        <button class="button" onclick="myFunction()">import recipe</button>
+        <button class="button" v-on:click="switchToResults()" type="button">
+          see results</button>
+          <div id="snackbar">This feature is coming soon...</div>
       </div>
 
       <form v-on:submit.prevent="addItem">
@@ -54,15 +54,19 @@
             <div id="input_item">
               <input v-model="addedBrand" placeholder="preferred brand"></p>
             </div>
+            <button type="submit" class="submit" id="submit-btn">submit</button>
+
           </div>
         </div>
 
-        <button type="submit" id="submit">submit</button>
-
       </form>
 
-      <h1 id="title">Entered Ingredients</h1>
-      <div v-for="ingredient in ingredients">
+      <div>
+        
+      </div>
+
+      <!-- <h1 class="title">Entered Ingredients</h1> -->
+      <div v-for="ingredient in ingredients" id="ingredients-shown">
         <hr>
         <p>{{ingredient.item}}</p>
         <p>{{ingredient.quantity}}</p>
@@ -74,7 +78,7 @@
     </div>
     <div v-else>
       <div id="horizontal">
-        <h1 id="title">Results</h1>
+        <h1 class="title">Results</h1>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Sort By
@@ -86,7 +90,7 @@
         </div>
       </div>
 
-      <button id="btn" v-on:click="switchToInput()" type="button">
+      <button class="button" v-on:click="switchToInput()" type="button">
          return to input</button>
 
       <!-- bootstrap grid structure -->

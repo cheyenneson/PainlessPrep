@@ -48,15 +48,35 @@ button {
 
 /*steps*/
 
-#step-1 {
+.step {
+  width: 400px;
   background-color: #ffda01;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  /*box-shadow: 5px 10px #6c6d70;*/
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+  border-radius: 8px;
 }
 
 .step-title {
   color: #6c6d70;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.step-img {
+  width: 200px;
 }
 
 #steps-container {
   display: flex;
   justify-content: space-evenly;
+  height: 800px;
+  width: 100%;
+  background-color: #f8f9fa;
+  transition: width 2s;
 }
+
