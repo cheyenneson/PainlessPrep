@@ -99,9 +99,10 @@ button {
   height: 64px;
   width: 160px;
 }
-/*
+
 #step-3 {
-  height: 64px;
-  width: 160px;
-}*/
+  height: 55px;
+  width: 150px;
+  background-color: white;
+}
 
