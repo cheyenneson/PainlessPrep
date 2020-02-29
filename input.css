@@ -28,6 +28,16 @@ input {
   margin: 4px;
 }
 
+#button-return {
+  width: 150px;
+  background-color: #ff0000;
+  border: none;
+  color: #f8f9fa;
+  border-radius: 4px;
+  height: 38px;
+  margin-right: 4px;
+}
+
 #horizontal {
   height: 100%;
   width: 600px;
@@ -158,7 +168,7 @@ input {
   border-radius: 8px;
   color: #6c6d70;
   width: 200px;
-  height: 100px;
+  height: auto;
   padding: 8px;
   margin: 16px;
   flex-basis: 0;

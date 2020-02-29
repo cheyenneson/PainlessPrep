@@ -79,10 +79,11 @@
     <div v-else>
       <div id="horizontal">
         <h1 class="title">Results</h1>
+        <button id="button-return" v-on:click="switchToInput()" type="button">
+          return to input</button>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Sort By
-      </button>
+          Sort By</button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#">Price</a>
             <a class="dropdown-item" href="#">Popularity</a>
@@ -90,11 +91,8 @@
         </div>
       </div>
 
-      <button class="button" v-on:click="switchToInput()" type="button">
-         return to input</button>
-
       <!-- bootstrap grid structure -->
-      <div class="container">
+      <div class="container" style="width: 800px;">
         <div class="row">
           <div class="col-sm">
             <img style="height: 20px;" class="brand" src="./img/walmart.png" />
@@ -120,7 +118,7 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container" style="width: 800px;">
         <div class="row">
           <div class="col-sm">
             <img style="height: 20px;" class="brand" src="./img/smiths.svg" />

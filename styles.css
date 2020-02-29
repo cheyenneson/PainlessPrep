@@ -22,6 +22,7 @@ button {
   background-color: #ff0000;
   border: none;
   color: #f8f9fa;
+  margin: auto;
 }
 
 #horizontal {
@@ -48,16 +49,16 @@ button {
 
 /*steps*/
 
-.step {
+.step, .shadows {
   width: 400px;
   background-color: #ffda01;
   height: 50%;
   margin-top: auto;
   margin-bottom: auto;
   /*box-shadow: 5px 10px #6c6d70;*/
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+  -moz-box-shadow:    5px 6px #ccc;
+  -webkit-box-shadow: 5px 6px #ccc;
+  box-shadow:         5px 6px #ccc;
   border-radius: 8px;
 }
 
@@ -68,7 +69,7 @@ button {
 }
 
 .step-img {
-  width: 200px;
+  width: 100%;
 }
 
 #steps-container {
@@ -79,4 +80,20 @@ button {
   background-color: #f8f9fa;
   transition: width 2s;
 }
+
+.step p {
+  color: #6c6d70;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+#step-3 button, #step-3 {
+  height: 64px;
+  width: 160px;
+}
+/*
+#step-3 {
+  height: 64px;
+  width: 160px;
+}*/
 
