@@ -4,6 +4,14 @@
   /*background-image: url("img/food.png");*/
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#get-started {
+  transition: all .4s;
+}
+
 .intro {
   width: 400px;
   float: right;
